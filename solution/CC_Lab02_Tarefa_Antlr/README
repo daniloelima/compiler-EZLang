@@ -1,0 +1,30 @@
+* Passos para executar a solução do Lab02 no ANTLR:
+
+1) Edite as variáveis do Makefile da mesma forma que foi feito no Lab01.
+
+2) Para rodar o ANTLR e compilar os arquivos gerados:
+
+   $ make
+
+   Isto cria um diretório 'parser' para os arquivos gerados pelo ANTLR. Isto não
+   é obrigatório de fazer mas eu acho uma boa para não misturar com o resto do
+   código.
+
+   O ANTLR gera vários arquivos automaticamente a partir das gramáticas,
+   incluindo o EZLexer.java com a implementação do scanner e o EZParser.java
+   com a implementação do parser. Como pode ser visto pelos arquivos .class,
+   também há uma série de classes internas no parser.
+
+3) Para executar o parser com um único arquivo de entrada:
+
+   $ make run FILE=arquivo_de_teste
+
+4) Se quiser rodar todos os casos de teste de uma vez, basta fazer:
+
+   $ make runall
+
+- Veja os comentários nos demais arquivos para maiores informações sobre o
+  funcionamento das gramáticas e do ANTLR.
+
+- Compare os resultados da saída do flex/bison com as do ANTLR, em particular
+  para os arquivos com erro.
